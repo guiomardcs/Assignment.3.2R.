@@ -1,0 +1,43 @@
+---
+title: "Random Art Generator"
+author: "Guiomar del Cuvillo"
+date: "2024-01-25"
+output: html_document
+---
+
+Download the circle package in order to use the function rand_color() which 
+randomized colors. 
+```{r}
+library(circlize)
+```
+
+The function make_art():
+```{r}
+make_art <- function(seed = NULL){
+  if(!is.null(seed)){
+    seed <- set.seed()
+  }
+  plot(1:10, axes = FALSE, ann = FALSE, type = "n")
+  for(i in 1:10){
+    segments(runif(1, min = 1, max = 10), runif(1, min = 1, max = 10), 
+             runif(1, min = 1, max = 10), runif(1, min = 1, max = 10), 
+             col = rand_color(1))
+  }
+  for(i in 1:10){
+    lines(runif(10, min = 1, max = 10), col = rand_color(1))
+  }
+}
+```
+
+generating random art:
+```{r}
+make_art()
+```
+
+setting a seed in order to generate reproducible art:
+```{r}
+make_art(set.seed(1234))
+```
+
+
+
