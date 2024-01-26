@@ -19,4 +19,3 @@ cheat <- function(question_number){
   }
   else (paste("Sorry, no cheat code for this question :("))
 }
-cheat(12)
