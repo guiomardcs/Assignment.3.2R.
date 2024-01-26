@@ -1,8 +1,6 @@
-library(circlize)
-
 make_art <- function(seed = NULL){
   if(!is.null(seed)){
-    seed <- set.seed()
+    set.seed(seed)
   }
   plot(1:10, axes = FALSE, ann = FALSE, type = "n")
   for(i in 1:10){
