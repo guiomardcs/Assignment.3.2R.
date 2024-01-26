@@ -1,0 +1,30 @@
+---
+title: "Random Art Generator"
+author: "Guiomar del Cuvillo"
+date: "2024-01-25"
+output: html_document
+---
+
+Download the circle package in order to use the function rand_color() which 
+randomized colors. 
+```{r}
+library(circlize)
+```
+
+Sourcing the function make_art():
+```{r}
+source("https://raw.githubusercontent.com/guiomardcs/Assignment.3.2R./main/make_art_function.R")
+```
+
+generating random art:
+```{r}
+make_art()
+```
+
+setting a seed in order to generate reproducible art:
+```{r}
+make_art(1234)
+```
+
+
+
